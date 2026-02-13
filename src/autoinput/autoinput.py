@@ -101,8 +101,6 @@ def autoinput(outstring: str, typeel, pipe_in: Callable[[str], str]=input, pipe_
                 else:
                     res = inobj
                 return res
-            except (KeyboardInterrupt, EOFError):
-                exit()
             except ValueError:
                 raise InputError(one_space(f"Not {'an array of' if array else 'an' if typeel & autoinput_type.INTEGER else 'a'}\
                                                                     {'integer' if typeel & autoinput_type.INTEGER\
