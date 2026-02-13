@@ -45,7 +45,7 @@ def one_space(string: str) -> str:
     return res
 
 
-def autoinput(outstring: str, typeel, pipe_in: Callable[[str], str]=input, pipe_out: Callable[[str], None]=print, pipe_out_end_name: str="end", parser=None) -> Any:
+def autoinput(outstring: str, typeel, pipe_in: Callable[[str], str]=input, pipe_out: Callable[[str], None]=print, pipe_out_end_name: str="end", pipe_out_flush_name: str = "flush", parser=None) -> Any:
     """
     autoinput - input with automatic parsing and error handling.
     """
@@ -74,7 +74,10 @@ def autoinput(outstring: str, typeel, pipe_in: Callable[[str], str]=input, pipe_
             if pipe_out_end_name is None:
                 pipe_out(outstring)
             else:
-                pipe_out(outstring, **{pipe_out_end_name: ""})
+                out_kw = {pipe_out_end_name: ""}
+                if not pipe_out_flush_name is None:
+                    out_kw[pipe_out_flush_name] = True
+                pipe_out(outstring, **out_kw)
         except Exception as e:
             print("Error while printing! Traceback:", file=sys.stderr)
             tracebk.print_exc()
