@@ -22,7 +22,14 @@ and everything is inside the function. No work by hands.
 Here is the definition
 
 ```Python
-def autoinput(outstring: str, typeel, pipe_in: Callable[[str], str]=input, pipe_out: Callable[[str], None]=print, pipe_out_end_name: str="end", pipe_out_flush_name: str="flush", parser=None) -> Any:
+def autoinput(outstring: str,
+              typeel,
+              pipe_in: Callable[[str], str]=input,
+              pipe_out: Callable[[str], None]=print,
+              pipe_out_end_name: str="end",
+              pipe_out_flush_name: str = "flush",
+              use_input_argument_for_output: bool=True,
+              parser=None) -> Any:
 ```
 
 First argument  - `outstring`, string to show.
@@ -41,6 +48,7 @@ kwargs:
   
   `pipe_out_flush_name` - the same as `pipe_out_end_name` but for flush.
 
+  `use_input_argument_for_output` - specifies if your pipe_in should get outsring as an output.
 ## autoinput_type - the way to specify type of data
 
 ### values

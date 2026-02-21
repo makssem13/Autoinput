@@ -1,10 +1,9 @@
 [build-system]
-requires = ["setuptools >= 77.0.3"]
+requires = ["setuptools>=77.0.3", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "autoinput"
-version = "1.4"
 authors = [
   { name="Semenii Maksym", email="maks20sem@gmail.com" },
 ]
@@ -17,6 +16,7 @@ classifiers = [
 ]
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
+dynamic = ["version"]
 
 [project.urls]
 Homepage = "https://github.com/makssem13/Autoinput"
