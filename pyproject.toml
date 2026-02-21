@@ -19,7 +19,7 @@ license-files = ["LICEN[CS]E*"]
 dynamic = ["version"]
 
 [tool.setuptools_scm]
-write_to = "autoinput/_version.py"
+write_to = "src/autoinput/_version.py"
 
 [project.urls]
 Homepage = "https://github.com/makssem13/Autoinput"
