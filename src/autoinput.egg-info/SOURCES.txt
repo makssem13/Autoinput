@@ -1,9 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-src/autoinput/__init__.py
-src/autoinput/autoinput.py
-src/autoinput.egg-info/PKG-INFO
-src/autoinput.egg-info/SOURCES.txt
-src/autoinput.egg-info/dependency_links.txt
-src/autoinput.egg-info/top_level.txt
